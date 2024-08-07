@@ -14,55 +14,57 @@
   </head>
   <body>
     <main class="container">
-      <div class="header">
-        <h1>Mortgage Calculator</h1>
-        <a href="index.html">Clear All</a>
-      </div>
-      <div class="input-section">
-        <label for="mortgage-amount">Mortgage Amount</label>
-        <div class="input-group">
-          <span class="input-prefix">$</span>
-          <input type="number" name="mortgage-amount" id="mortgage-amount" />
+      <div class="section">
+        <div class="header">
+          <h1>Mortgage Calculator</h1>
+          <a href="index.html">Clear All</a>
         </div>
+        <div class="input-section">
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <div class="input-group">
+            <span class="input-prefix">$</span>
+            <input type="number" name="mortgage-amount" id="mortgage-amount" />
+          </div>
 
-        <label for="mortgage-term">Mortgage Term</label>
-        <div class="input-group">
-          <input type="number" name="mortgage-term" id="mortgage-term" />
-          <span class="input-suffix">years</span>
+          <label for="mortgage-term">Mortgage Term</label>
+          <div class="input-group">
+            <input type="number" name="mortgage-term" id="mortgage-term" />
+            <span class="input-suffix">years</span>
+          </div>
+
+          <label for="interest-rate">Interest Rate</label>
+          <div class="input-group">
+            <input type="text" name="interest-rate" id="interest-rate" />
+            <span class="input-suffix">%</span>
+          </div>
+
+          <div class="mortgage_type">
+            <legend>Mortgage Type:</legend>
+            <label for="repayment">
+              <input
+                type="radio"
+                id="repayment"
+                name="mortgage_type"
+                value="repayment"
+                checked
+              />
+              <span>Repayment</span>
+            </label>
+            <label for="interest-only">
+              <input
+                type="radio"
+                id="interest-only"
+                name="mortgage_type"
+                value="interest-only"
+              />
+              <span>Interest Only</span>
+            </label>
+          </div>
+          <button type="submit">
+            <img src="./assets/images/icon-calculator.svg" alt="Calculate" />
+            <span>Calculate Repayments</span>
+          </button>
         </div>
-
-        <label for="interest-rate">Interest Rate</label>
-        <div class="input-group">
-          <input type="text" name="interest-rate" id="interest-rate" />
-          <span class="input-suffix">%</span>
-        </div>
-
-        <fieldset>
-          <legend>Mortgage Type:</legend>
-          <label for="repayment">
-            <input
-              type="radio"
-              id="repayment"
-              name="mortgage_type"
-              value="repayment"
-              checked
-            />
-            <span>Repayment</span>
-          </label>
-          <label for="interest-only">
-            <input
-              type="radio"
-              id="interest-only"
-              name="mortgage_type"
-              value="interest-only"
-            />
-            <span>Interest Only</span>
-          </label>
-        </fieldset>
-        <button type="submit">
-          <img src="./assets/images/icon-calculator.svg" alt="Calculate" />
-          <span>Calculate Repayments</span>
-        </button>
       </div>
 
       <div class="resultsec rsection">
@@ -73,7 +75,7 @@
           again.
         </p>
         <div class="results">
-          <div class="result-item">
+          <div class="result-item first">
             <span>Your monthly repayments</span>
             <span id="ymp">$1,797.74</span>
           </div>
