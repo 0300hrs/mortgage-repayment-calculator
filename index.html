@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <h1>Mortgage Calculator</h1>
+        <a href="index.html">Clear All</a>
+      </div>
+      <div class="input-section">
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <div class="input-group">
+          <span class="input-prefix">$</span>
+          <input type="number" name="mortgage-amount" id="mortgage-amount" />
+        </div>
+
+        <label for="mortgage-term">Mortgage Term</label>
+        <div class="input-group">
+          <input type="number" name="mortgage-term" id="mortgage-term" />
+          <span class="input-suffix">years</span>
+        </div>
+
+        <label for="interest-rate">Interest Rate</label>
+        <div class="input-group">
+          <input type="text" name="interest-rate" id="interest-rate" />
+          <span class="input-suffix">%</span>
+        </div>
+
+        <fieldset>
+          <legend>Mortgage Type:</legend>
+          <label for="repayment">
+            <input
+              type="radio"
+              id="repayment"
+              name="mortgage_type"
+              value="repayment"
+              checked
+            />
+            <span>Repayment</span>
+          </label>
+          <label for="interest-only">
+            <input
+              type="radio"
+              id="interest-only"
+              name="mortgage_type"
+              value="interest-only"
+            />
+            <span>Interest Only</span>
+          </label>
+        </fieldset>
+        <button type="submit">
+          <img src="./assets/images/icon-calculator.svg" alt="Calculate" />
+          <span>Calculate Repayments</span>
+        </button>
+      </div>
+
+      <div class="resultsec rsection">
+        <h1>Your Results</h1>
+        <p>
+          Your results are shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+        <div class="results">
+          <div class="result-item">
+            <span>Your monthly repayments</span>
+            <span id="ymp">$1,797.74</span>
+          </div>
+          <div class="result-item">
+            <span>Total you'll repay over the term</span>
+            <span id="pot">$539,322.94</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="resultsec rplaceholder">
+        <img src="./assets/images/illustration-empty.svg" alt="empty balance" />
+        <h1>Results shown here</h1>
+        <p>
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
