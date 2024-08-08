@@ -114,13 +114,25 @@ body {
     justify-content: center;
   }
 
+  #required {
+    background-color: red;
+    border: 2px solid red;
+  }
+
   .input-group:focus-within {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #d7da2f;
+    border: 2px solid #d7da2f;
+  }
+
+  .input-group:focus-within .input-prefix,
+  .input-group:focus-within .input-suffix {
+    background-color: #d7da2f;
   }
 
   .input-prefix,
   .input-suffix {
-    background-color: #9abed5;
+    background-color: inherit;
     color: #4e6e7e;
     padding: 0 15px;
     flex-grow: 0;
