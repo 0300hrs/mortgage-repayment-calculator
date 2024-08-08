@@ -20,24 +20,36 @@
           <a href="index.html">Clear All</a>
         </div>
         <div class="input-section">
-          <label for="mortgage-amount">Mortgage Amount</label>
-          <div class="input-group">
-            <span class="input-prefix">$</span>
-            <input type="number" name="mortgage-amount" id="mortgage-amount" />
+          <div class="units">
+            <label for="mortgage-amount">Mortgage Amount</label>
+            <div class="input-group">
+              <span class="input-prefix">$</span>
+              <input
+                type="number"
+                name="mortgage-amount"
+                id="mortgage-amount"
+              />
+            </div>
+            <span class="warning">This field is required</span>
           </div>
-
-          <label for="mortgage-term">Mortgage Term</label>
-          <div class="input-group">
-            <input type="number" name="mortgage-term" id="mortgage-term" />
-            <span class="input-suffix">years</span>
+          <div class="break">
+            <div class="unit">
+              <label for="mortgage-term">Mortgage Term</label>
+              <div class="input-group">
+                <input type="number" name="mortgage-term" id="mortgage-term" />
+                <span class="input-suffix">years</span>
+              </div>
+              <span class="warning">This field is required</span>
+            </div>
+            <div class="unit">
+              <label for="interest-rate">Interest Rate</label>
+              <div class="input-group">
+                <input type="text" name="interest-rate" id="interest-rate" />
+                <span class="input-suffix">%</span>
+              </div>
+              <span class="warning">This field is required</span>
+            </div>
           </div>
-
-          <label for="interest-rate">Interest Rate</label>
-          <div class="input-group">
-            <input type="text" name="interest-rate" id="interest-rate" />
-            <span class="input-suffix">%</span>
-          </div>
-
           <div class="mortgage_type">
             <legend>Mortgage Type:</legend>
             <label for="repayment">
@@ -67,32 +79,39 @@
         </div>
       </div>
 
-      <div class="resultsec rsection">
-        <h1>Your Results</h1>
-        <p>
-          Your results are shown below based on the information you provided. To
-          adjust the results, edit the form and click “calculate repayments”
-          again.
-        </p>
-        <div class="results">
-          <div class="result-item first">
-            <span>Your monthly repayments</span>
-            <span id="ymp">$1,797.74</span>
-          </div>
-          <div class="result-item">
-            <span>Total you'll repay over the term</span>
-            <span id="pot">$539,322.94</span>
+      <div class="resultsec rsection" id="repayment-result">
+        <div class="rrr">
+          <h1>Your Results</h1>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div class="results">
+            <div class="result-item first">
+              <span>Your monthly repayments</span>
+              <span id="ymp">$1,797.74</span>
+            </div>
+            <div class="result-item">
+              <span>Total you'll repay over the term</span>
+              <span id="pot">$539,322.94</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="resultsec rplaceholder">
-        <img src="./assets/images/illustration-empty.svg" alt="empty balance" />
-        <h1>Results shown here</h1>
-        <p>
-          Complete the form and click “calculate repayments” to see what your
-          monthly repayments would be.
-        </p>
+      <div class="resultsec rplaceholder" id="placehold">
+        <div class="rrr">
+          <img
+            src="./assets/images/illustration-empty.svg"
+            alt="empty balance"
+          />
+          <h1>Results shown here</h1>
+          <p>
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
       </div>
     </main>
   </body>
